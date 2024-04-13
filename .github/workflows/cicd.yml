@@ -1,0 +1,27 @@
+name: CI-CD Pipeline
+
+
+on:
+    push:
+        branches:
+            [main]
+
+jobs:
+    test:
+        name: Test
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout to repo
+              uses: actions/checkout@main
+
+            - name: Setup Node
+              uses: actions/setup-node@main
+            
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Run Unit Test
+              run: npm run test:ci
+    
+    

@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'introduction';
+  username = 'jhean';
+  message = "";
+
+  onSubmit(e: Event): void {
+    if(this.message === "")
+      this.message = "Thank you"
+    else
+      this.message = ""
+
+    console.log(e);
+  }
 }

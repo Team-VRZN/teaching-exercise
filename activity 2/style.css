@@ -1,0 +1,14 @@
+span {
+    font-size: 3rem;
+}
+
+.button-container {
+    margin-bottom: 30px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
